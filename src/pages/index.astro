@@ -1,9 +1,8 @@
 ---
-// Component Imports
-import Counter from '../components/Counter';
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+import Header from '@components/layouts/header.astro';
+import '@fontsource-variable/overpass';
+import '@fontsource-variable/noto-emoji';
+import '@styles/base.css';
 ---
 
 <html lang="en">
@@ -12,22 +11,11 @@ import Counter from '../components/Counter';
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <style>
-            html,
-            body {
-                font-family: system-ui;
-                margin: 0;
-            }
-            body {
-                padding: 2rem;
-            }
-        </style>
+        <title>Em☺️git</title>
     </head>
     <body>
         <main>
-            <Counter client:visible>
-                <h1>Hello, Solid!</h1>
-            </Counter>
+            <Header />
         </main>
     </body>
 </html>

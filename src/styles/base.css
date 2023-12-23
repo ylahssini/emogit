@@ -1,0 +1,9 @@
+html,
+body {
+    font-family: 'Overpass Variable', system-ui, sans-serif;
+    @apply m-0 p-0 bg-yellow-400;
+}
+
+body {
+    padding: 2rem;
+}
