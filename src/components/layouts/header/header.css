@@ -1,0 +1,3 @@
+.emoji {
+    @apply font-emoji inline-block cursor-pointer transition-transform ease-in-out active:rotate-45 active:scale-125;
+}
