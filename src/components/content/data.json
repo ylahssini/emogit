@@ -44,7 +44,7 @@
         "name": "Magic Wand",
         "short": ":magic_wand:",
         "description": "Update the static data",
-        "template": "Update the static data of {{name}}",
+        "template": "Update the static data",
         "category": "Script/Code"
     }
 ]
