@@ -13,4 +13,5 @@ export default {
     singleQuote: true,
     arrowParens: 'avoid',
     tabWidth: 4,
+    semi: false,
 };
