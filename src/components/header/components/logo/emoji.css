@@ -1,0 +1,15 @@
+.emoji {
+    @apply
+    font-emoji 
+    inline-block
+    cursor-pointer
+    transition-transform
+    ease-in-out
+    active:rotate-45
+    active:scale-125
+    text-6xl
+    -mx-3
+    relative
+    top-1
+    z-10;
+}
