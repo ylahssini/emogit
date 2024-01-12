@@ -1,5 +1,5 @@
 label.switch {
-    @apply border border-yellow-500 flex p-px w-8 rounded-full cursor-pointer;
+    @apply flex justify-between items-center gap-2 cursor-pointer;
 }
 
 label.switch > input {
@@ -7,5 +7,9 @@ label.switch > input {
 }
 
 label.switch > span {
-    @apply w-4 h-4 block bg-yellow-500 rounded-full;
+    @apply border border-yellow-500 p-px w-8 rounded-full transition-all before:transition-all before:w-4 before:h-4 before:block before:bg-yellow-500 before:rounded-full;
+}
+
+label.switch > input:checked + span {
+    @apply border-green-500 before:translate-x-3 before:bg-green-500
 }

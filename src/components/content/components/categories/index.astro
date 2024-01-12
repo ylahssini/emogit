@@ -18,20 +18,16 @@ const categories = Array.from(new Set(data.map((item) => item.category)))
     </nav>
 
     <aside class="flex justify-between gap-4 items-center">
-        <div class="flex justify-between items-center gap-2">
-            <label class="switch" for="color-setting">
-                <input type="checkbox" name="setting" id="color-setting" />
-                <span />
-            </label>
+        <label class="switch" for="color-setting">
+            <input type="checkbox" name="setting" id="color-setting" />
+            <span />
             <b class="font-light text-sm">No color</b>
-        </div>
+        </label>
 
-        <div class="flex justify-between items-center gap-2">
-            <label class="switch" for="system-setting">
-                <input type="checkbox" name="setting" id="system-setting" />
-                <span />
-            </label>
+        <label class="switch" for="system-setting">
+            <input type="checkbox" name="setting" id="system-setting" />
+            <span />
             <b class="font-light text-sm">System font</b>
-        </div>
+        </label>
     </aside>
 </header>
