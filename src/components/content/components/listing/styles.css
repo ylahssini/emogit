@@ -1,0 +1,8 @@
+.card {
+    @apply transition-all p-4 ease-out text-center rounded-3xl hover:shadow-[0_3px_10px_rgba(0,0,0,0.09)];
+    transform: rotate3d(0);
+}
+
+.card:hover {
+    transform: scale3d(1.07, 1.07, 1.07);
+}

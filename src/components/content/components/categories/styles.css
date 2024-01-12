@@ -1,0 +1,11 @@
+label.switch {
+    @apply border border-yellow-500 flex p-px w-8 rounded-full cursor-pointer;
+}
+
+label.switch > input {
+    @apply hidden;
+}
+
+label.switch > span {
+    @apply w-4 h-4 block bg-yellow-500 rounded-full;
+}
