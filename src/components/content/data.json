@@ -40,9 +40,9 @@
         "category": "Script/Code"
     },
     {
-        "emoji": "🗂️",
-        "name": "Magic Wand",
-        "short": ":magic_wand:",
+        "emoji": "🗃️",
+        "name": "Card File Box",
+        "short": ":card_box:",
         "description": "Update the static data",
         "template": "Update the static data",
         "category": "Script/Code"
