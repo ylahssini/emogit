@@ -2,7 +2,7 @@ import { createSignal } from "solid-js"
 
 const emojis = ['😄', '😂', '😆', '😎', '😜', '😭', '😖', '😪', '😅']
 
-export default function Emoji() {
+const Emogit = () => {
     const [emoji, setEmoji] = createSignal(emojis[0])
 
     function handleEmoji() {
@@ -18,8 +18,14 @@ export default function Emoji() {
     }
 
     return (
-        <span class="emoji" role="button" onClick={handleEmoji}>
-            {emoji()}
-        </span>
+        <div class="mb-10 text-center">
+            <h1 class="text-5xl font-light text-black selection:bg-transparent">
+                Em<span class="emoji" role="button" onClick={handleEmoji}>{emoji()}</span>git
+            </h1>
+            <p>A Git commit messages style-guide</p>
+        </div>
+        
     )
 }
+
+export default Emogit;

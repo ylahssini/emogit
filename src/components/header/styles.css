@@ -1,6 +1,6 @@
 .emoji {
     @apply
-    font-emoji 
+    font-emoji
     inline-block
     cursor-pointer
     transition-transform
