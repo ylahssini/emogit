@@ -7,9 +7,9 @@ label.switch > input {
 }
 
 label.switch > span {
-    @apply border border-yellow-500 p-px w-8 rounded-full transition-all before:transition-all before:w-4 before:h-4 before:block before:bg-yellow-500 before:rounded-full;
+    @apply bg-gray-200 p-px w-8 rounded-full transition-all before:transition-all before:w-4 before:h-4 before:block before:bg-white before:rounded-full;
 }
 
 label.switch > input:checked + span {
-    @apply border-green-500 before:translate-x-3 before:bg-green-500
+    @apply bg-yellow-400 before:translate-x-3.5
 }

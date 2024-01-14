@@ -1,12 +1,29 @@
-import Emogit from './emogit'
-import Search from './search'
+import { createSignal } from "solid-js"
 import './styles.css'
 
+const emojis = ['😄', '😂', '😆', '😎', '😜', '😭', '😖', '😪', '😅']
+
 const Header = () => {
+    const [emoji, setEmoji] = createSignal(emojis[0])
+
+    function handleEmoji() {
+        setEmoji((value) => {
+            const indexEmoji = emojis.findIndex(item => item === value)
+            
+            if (emojis[indexEmoji + 1]) {
+                return emojis[indexEmoji + 1]
+            }
+
+            return emojis[0]
+        })
+    }
+
     return (
-        <header class="p-8">
-            <Emogit />
-            <Search />
+        <header class="mb-10 p-8 text-center">
+            <h1 class="text-5xl font-light text-black selection:bg-transparent">
+                Em<span class="emoji" role="button" onClick={handleEmoji}>{emoji()}</span>git
+            </h1>
+            <p>A Git commit messages style-guide</p>
         </header>
     )
 }

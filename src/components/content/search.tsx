@@ -1,6 +1,6 @@
 const Search = () => {
     return (
-        <fieldset class="rounded-md bg-white flex items-center justify-between max-w-md my-8 mx-auto shadow-[0_1px_4px_rgba(0,0,0,0.15)]">
+        <fieldset class="rounded-xl bg-white flex items-center justify-between max-w-md mt-8 mb-12 mx-auto">
             <input
                 type="text"
                 placeholder="Search name or description..."

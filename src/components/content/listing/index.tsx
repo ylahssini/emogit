@@ -1,6 +1,5 @@
+import { useEmojiContext } from '@/context';
 import './styles.css';
-
-const emojis: any[] = [];
 
 const colors = ['rose', 'red', 'purple', 'lime', 'orange', 'sky', 'blue', 'amber', 'fuchsia', 'violet', 'green'];
 
@@ -9,6 +8,8 @@ function random(min: number, max: number): number {
 }
 
 const Listing = () => {
+    const [{ emojis }] = useEmojiContext();
+
     return (
         <ul class="grid grid-cols-5 grid-rows-5 gap-8">
             {emojis.map((emoji) => {
