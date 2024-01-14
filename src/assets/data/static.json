@@ -1,0 +1,50 @@
+[
+    {
+        "emoji": "🎬",
+        "name": "Clapper Board",
+        "short": ":clapper:",
+        "description": "Begin a project",
+        "template": "begin a project",
+        "category": "Features"
+    },
+    {
+        "emoji": "⭐",
+        "name": "Star",
+        "short": ":star:",
+        "description": "Finish the new feature",
+        "template": "finish {{name}} feature",
+        "category": "Features"
+    },
+    {
+        "emoji": "⛔",
+        "name": "No Entry",
+        "short": ":no_entry:",
+        "description": "Remove deprecated feature",
+        "template": "remove deprecated feature of {{name}}",
+        "category": "Features"
+    },
+    {
+        "emoji": "🚧",
+        "name": "Construction Sign",
+        "short": ":construction:",
+        "description": "Feature in progress",
+        "template": "the feature ({{name}}) is in progress",
+        "category": "Features"
+    },
+    {
+        "emoji": "🪄",
+        "name": "Magic Wand",
+        "short": ":magic_wand:",
+        "description": "Optimize the code",
+        "template": "Optimize the code of {{name}}",
+        "category": "Script/Code"
+    },
+    {
+        "emoji": "🗂️",
+        "name": "Card Index Dividers",
+        "short": ":card_index_dividers:",
+        "description": "Update the static data",
+        "template": "Update the static data",
+        "category": "Script/Code"
+    }
+]
