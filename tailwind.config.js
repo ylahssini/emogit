@@ -13,6 +13,11 @@ module.exports = {
     'bg-amber-100',
     'bg-fuchsia-100',
     'bg-violet-100',
+    'bg-yellow-100',
+    'bg-emerald-100',
+    'bg-teal-100',
+    'bg-indigo-100',
+    'bg-cyan-100',
     'hover:bg-rose-200',
     'hover:bg-red-200',
     'hover:bg-purple-200',
@@ -24,11 +29,16 @@ module.exports = {
     'hover:bg-amber-200',
     'hover:bg-fuchsia-200',
     'hover:bg-violet-200',
+    'hover:bg-yellow-200',
+    'hover:bg-emerald-200',
+    'hover:bg-teal-200',
+    'hover:bg-indigo-200',
+    'hover:bg-cyan-200',
   ],
   theme: {
     extend: {
       fontFamily: {
-        'emoji': ['OpenMoji', 'system-ui', 'sans-serif']
+        'emoji': ['OpenMoji', 'system-ui', 'sans-serif'],
       }
     },
   },
