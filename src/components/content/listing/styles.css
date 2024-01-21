@@ -6,3 +6,64 @@
 .card:hover {
     transform: scale3d(1.07, 1.07, 1.07);
 }
+
+@keyframes come_in {
+    0% {
+        @apply translate-x-64
+    }
+
+    75% {
+        @apply -translate-x-10
+    }
+
+    100% {
+        @apply translate-x-0
+    }
+}
+
+@keyframes come_out {
+    0% {
+        @apply translate-x-0
+    }
+
+    75% {
+        @apply -translate-x-10
+    }
+
+    100% {
+        @apply translate-x-80
+    }
+}
+
+@keyframes progress_bar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.toast {
+    @apply rounded-xl p-3 shadow-xl flex gap-4 relative overflow-clip;
+    animation: come_in .4s ease-out 0s 1 forwards;
+}
+
+.toast.__closed {
+    animation: come_out .4s ease-out 0s 1 forwards;
+}
+
+.toast:hover .progress {
+    animation-play-state: paused;
+}
+
+.close_toast {
+    @apply font-emoji absolute top-2 right-2 cursor-pointer text-sm transition-transform ease-in-out active:scale-95;
+}
+
+.progress {
+    @apply absolute left-0 bottom-0 h-1.5 w-0;
+    animation: progress_bar 5s linear 0s 1 forwards;
+    animation-play-state: running;
+}
