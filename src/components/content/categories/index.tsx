@@ -2,12 +2,15 @@ import { useEmojiContext } from '@/context';
 import './styles.css';
 
 const Categories = () => {
-    const [{ emojis }] = useEmojiContext();
+    const [state, { setFontSetting }] = useEmojiContext();
+    const categories = Array.from(new Set(state.emojis.map((emoji) => emoji.category)));
 
-    const categories = Array.from(new Set(emojis.map((emoji) => emoji.category)));
+    function handleEmojiFont(event: Event & { target: HTMLInputElement; }) {
+        setFontSetting?.('system_font', event.target.checked);
+    }
 
     return (
-        <header class="mb-3 flex justify-between gap-3 mb-8">
+        <header class="flex justify-between gap-3 mb-8">
             <nav class="flex justify-between gap-3">
                 {categories.map((category) => (
                     <button
@@ -20,14 +23,8 @@ const Categories = () => {
             </nav>
 
             <aside class="flex justify-between gap-4 items-center">
-                <label class="switch" for="color-setting">
-                    <input type="checkbox" name="setting" id="color-setting" />
-                    <span />
-                    <b class="font-light text-sm">No color</b>
-                </label>
-
                 <label class="switch" for="system-setting">
-                    <input type="checkbox" name="setting" id="system-setting" />
+                    <input type="checkbox" name="setting" id="system-setting" onChange={handleEmojiFont} checked={state.system_font} />
                     <span />
                     <b class="font-light text-sm">System font</b>
                 </label>

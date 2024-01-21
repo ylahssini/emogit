@@ -7,12 +7,10 @@ import Header from "./components/header";
 const App = () => {
 	return (
 		<main>
-			<EmojiProvider>
 				<Header />
-				<Router>
-					<Route path="/" component={Home} />
-				</Router>
-			</EmojiProvider>
+				<EmojiProvider>
+					<Home />
+				</EmojiProvider>
 		</main>
 	)
 }
