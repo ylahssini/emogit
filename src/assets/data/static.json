@@ -32,11 +32,27 @@
         "category": "Features"
     },
     {
+        "emoji": "🔨",
+        "name": "Hammer",
+        "short": ":hammer:",
+        "description": "Update development scripts",
+        "template": "Update the script of {{name}}",
+        "category": "Script/Code"
+    },
+    {
+        "emoji": "🔧",
+        "name": "Wrench",
+        "short": ":wrench:",
+        "description": "Update a configuration",
+        "template": "Update a configuration of {{name}}",
+        "category": "Script/Code"
+    },
+    {
         "emoji": "🪄",
         "name": "Magic Wand",
         "short": ":magic_wand:",
         "description": "Optimize the code",
-        "template": "Optimize the code of {{name}}",
+        "template": "Optimize the code of {{message}}",
         "category": "Script/Code"
     },
     {
@@ -46,5 +62,237 @@
         "description": "Update the static data",
         "template": "Update the static data",
         "category": "Script/Code"
+    },
+    {
+        "emoji": "🧹",
+        "name": "Broom",
+        "short": ":broom:",
+        "description": "Remove commented or deprecated scripts",
+        "template": "Remove commented or deprecated scripts",
+        "category": "Script/Code"
+    },
+    {
+        "emoji": "💡",
+        "name": "Light Bulb",
+        "short": ":bulb:",
+        "description": "Add / update the comments",
+        "template": "Add / update the comments",
+        "category": "Script/Code"
+    },
+    {
+        "emoji": "🐛",
+        "name": "Bug",
+        "short": ":bug:",
+        "description": "Fix a bug",
+        "template": "Fix a bug of {{message}}",
+        "category": "Bug"
+    },
+    {
+        "emoji": "🚑",
+        "name": "Ambulance",
+        "short": ":ambulance:",
+        "description": "Fix a critical bug",
+        "template": "Fix a critical bug of {{message}}",
+        "category": "Bug"
+    },
+    {
+        "emoji": "🩹",
+        "name": "Adhesive Bandage",
+        "short": ":adhesive_bandage:",
+        "description": "Fix a minor bug",
+        "template": "Fix a minor bug of {{message}}",
+        "category": "Bug"
+    },
+    {
+        "emoji": "📄",
+        "name": "Page Facing Up",
+        "short": ":page_facing_up:",
+        "description": "Add a documentation",
+        "template": "Add a documentation {{name}}",
+        "category": "Documentation"
+    },
+    {
+        "emoji": "📝",
+        "name": "Memo",
+        "short": ":memo:",
+        "description": "Edit a documentation",
+        "template": "Edit the documentation {{name}}",
+        "category": "Documentation"
+    },
+    {
+        "emoji": "🗑️",
+        "name": "Wastebasket",
+        "short": ":wastebasket:",
+        "description": "Remove a documentation",
+        "template": "Remove the documentation {{name}}",
+        "category": "Documentation"
+    },
+    {
+        "emoji": "🖌️",
+        "name": "Brush",
+        "short": ":paintbrush:",
+        "description": "Add style / class",
+        "template": "Stylize {{name}}",
+        "category": "Styles"
+    },
+    {
+        "emoji": "💄",
+        "name": "Lipstick",
+        "short": ":lipstick:",
+        "description": "Change the style",
+        "template": "Change the style of {{name}}",
+        "category": "Styles"
+    },
+    {
+        "emoji": "💅🏻",
+        "name": "Nail Polish",
+        "short": ":nail_polish_light_skin_tone:",
+        "description": "Configure theme",
+        "template": "Configure theme",
+        "category": "Styles"
+    },
+    {
+        "emoji": "👔",
+        "name": "Business Shirt",
+        "short": ":necktie:",
+        "description": "Refactor the code",
+        "template": "Refactor the code of {{description}}",
+        "category": "Refactor / Format"
+    },
+    {
+        "emoji": "🚨",
+        "name": "Flashing Light",
+        "short": ":necktie:",
+        "description": "Fix linter errors & warnings",
+        "template": "Fix linter errors & warnings",
+        "category": "Refactor / Format"
+    },
+    {
+        "emoji": "🎨",
+        "name": "Artist Palette",
+        "short": ":art:",
+        "description": "Format the code",
+        "template": "Format the code",
+        "category": "Refactor / Format"
+    },
+    {
+        "emoji": "🚚",
+        "name": "Truck",
+        "short": ":truck:",
+        "description": "Move or rename files / assets",
+        "template": "Move or rename files / assets",
+        "category": "Structure"
+    },
+    {
+        "emoji": "🍱",
+        "name": "Bento",
+        "short": ":bento:",
+        "description": "Add or update files / assets",
+        "template": "Add or update files / assets",
+        "category": "Structure"
+    },
+    {
+        "emoji": "🔥",
+        "name": "Fire",
+        "short": ":fire:",
+        "description": "Remove files / assets",
+        "template": "Remove files / assets",
+        "category": "Structure"
+    },
+    {
+        "emoji": "✅",
+        "name": "Alembic",
+        "short": ":alembic:",
+        "description": "Pass tests",
+        "template": "Pass tests of {{description}}",
+        "category": "Testing"
+    },
+    {
+        "emoji": "🤡",
+        "name": "Clown Face",
+        "short": ":clown_face:",
+        "description": "Add or update mock",
+        "template": "Add or update test of {{description}}",
+        "category": "Testing"
+    },
+    {
+        "emoji": "➕",
+        "name": "Plus",
+        "short": ":plus:",
+        "description": "Add dependency",
+        "template": "Add dependency ({{name}})",
+        "category": "Dependencies"
+    },
+    {
+        "emoji": "➖",
+        "name": "Minus",
+        "short": ":minus:",
+        "description": "Remove dependency",
+        "template": "Remove dependency ({{name}})",
+        "category": "Dependencies"
+    },
+    {
+        "emoji": "⬆️",
+        "name": "Arrow Up",
+        "short": ":arrow_up:",
+        "description": "Upgrade dependency",
+        "template": "Upgrade dependency ({{name}})",
+        "category": "Dependencies"
+    },
+    {
+        "emoji": "⬇️",
+        "name": "Arrow Down",
+        "short": ":arrow_down:",
+        "description": "Downgrade dependency",
+        "template": "Downgrade dependency ({{name}})",
+        "category": "Dependencies"
+    },
+    {
+        "emoji": "📌",
+        "name": "Pushpin",
+        "short": ":pushpin:",
+        "description": "Pin a specific dependency to version",
+        "template": "Pin a specific dependency {{name}} to version {{version}}",
+        "category": "Dependencies"
+    },
+    {
+        "emoji": "🌐",
+        "name": "World",
+        "short": ":globe_with_meridians:",
+        "description": "Add / update an internationalization / localization",
+        "template": "Add / update an I18n",
+        "category": "I18n"
+    },
+    {
+        "emoji": "📃",
+        "name": "Curly Page",
+        "short": ":globe_with_meridians:",
+        "description": "Add new article",
+        "template": "Add new article {{title}}",
+        "category": "Miscelenous"
+    },
+    {
+        "emoji": "🎊",
+        "name": "Confetti Ball",
+        "short": ":confetti_ball:",
+        "description": "Realease major version",
+        "template": "Realease major version {{version}}",
+        "category": "Release"
+    },
+    {
+        "emoji": "🎉",
+        "name": "Party Popper",
+        "short": ":tada:",
+        "description": "Realease minor version",
+        "template": "Realease minor version {{version}}",
+        "category": "Release"
+    },
+    {
+        "emoji": "✨",
+        "name": "Sparkles",
+        "short": ":sparkles:",
+        "description": "Realease patch version",
+        "template": "Realease patch version {{version}}",
+        "category": "Release"
     }
 ]
