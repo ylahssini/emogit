@@ -11,6 +11,15 @@ function random(min: number, max: number): number {
 const Listing = () => {
     const [state] = useEmojiContext();
 
+    async function handleCopy(emoji: string) {
+        try {
+            await navigator.clipboard.writeText(emoji);
+            console.log('Content copied to clipboard');
+        } catch (err) {
+            console.error('Failed to copy: ', err);
+        }
+    }
+
     return (
         <ul class="grid grid-cols-5 grid-rows-5 gap-8 pb-8">
             <For each={state.emojis.filter((emoji) => state.category !== '' ? (state.category === emoji.category) : true)}>
@@ -20,7 +29,13 @@ const Listing = () => {
 
                     return (
                         <li class={`${bg} card`}>
-                            <h3 class={`${state.system_font ? '' : 'font-emoji'} text-8xl pb-4`}>{emoji.emoji}</h3>
+                            <button
+                                class={`${state.system_font ? '' : 'font-emoji'} cursor-copy text-8xl pb-4`}
+                                type="button"
+                                onClick={() => handleCopy(emoji.emoji)}
+                            >
+                                {emoji.emoji}
+                            </button>
                             <h4>{emoji.description}</h4>
                             <small class="text-gray-500">{emoji.category}</small>
                         </li>
