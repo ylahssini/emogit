@@ -59,8 +59,8 @@
         "emoji": "🗂️",
         "name": "Card Index Dividers",
         "short": ":card_index_dividers:",
-        "description": "Update the static data",
-        "template": "Update the static data",
+        "description": "Add or update the static data",
+        "template": "Add or update the static data",
         "category": "Script/Code"
     },
     {
@@ -75,8 +75,24 @@
         "emoji": "💡",
         "name": "Light Bulb",
         "short": ":bulb:",
-        "description": "Add / update the comments",
-        "template": "Add / update the comments",
+        "description": "Add or update the comments",
+        "template": "Add or update the comments",
+        "category": "Script/Code"
+    },
+    {
+        "emoji": "🏷️",
+        "name": "Label",
+        "short": ":label:",
+        "description": "Add or update types / interfaces",
+        "template": "Add or update types / interfaces",
+        "category": "Script/Code"
+    },
+    {
+        "emoji": "👽️",
+        "name": "Alien",
+        "short": ":alien:",
+        "description": "Update code due to external API changes",
+        "template": "Update code due to external API changes",
         "category": "Script/Code"
     },
     {
@@ -101,6 +117,14 @@
         "short": ":adhesive_bandage:",
         "description": "Fix a minor bug",
         "template": "Fix a minor bug of {{message}}",
+        "category": "Bug"
+    },
+    {
+        "emoji": "🪤",
+        "name": "Mouse Trap",
+        "short": ":mouse_trap:",
+        "description": "Catch errors",
+        "template": "Catch errors",
         "category": "Bug"
     },
     {
@@ -149,6 +173,22 @@
         "short": ":nail_polish_light_skin_tone:",
         "description": "Configure theme",
         "template": "Configure theme",
+        "category": "Styles"
+    },
+    {
+        "emoji": "📱",
+        "name": "Mobile Phone",
+        "short": ":iphone:",
+        "description": "Work on responsive",
+        "template": "Work on responsive",
+        "category": "Styles"
+    },
+    {
+        "emoji": "🎞️",
+        "name": "Film Frames",
+        "short": ":film_strip:",
+        "description": "Add or update animations",
+        "template": "Add or update animations in {{description}}",
         "category": "Styles"
     },
     {
@@ -216,6 +256,14 @@
         "category": "Testing"
     },
     {
+        "emoji": "📸",
+        "name": "Camera with Flash",
+        "short": ":camera_flash:",
+        "description": "Add or update snapshots",
+        "template": "Add or update snapshots of {{description}}",
+        "category": "Testing"
+    },
+    {
         "emoji": "➕",
         "name": "Plus",
         "short": ":plus:",
@@ -259,9 +307,81 @@
         "emoji": "🌐",
         "name": "World",
         "short": ":globe_with_meridians:",
-        "description": "Add / update an internationalization / localization",
-        "template": "Add / update an I18n",
+        "description": "Add or update an internationalization / localization",
+        "template": "Add or update an I18n",
         "category": "I18n"
+    },
+    {
+        "emoji": "🎊",
+        "name": "Confetti Ball",
+        "short": ":confetti_ball:",
+        "description": "Release major version",
+        "template": "Release major version {{version}}",
+        "category": "Release"
+    },
+    {
+        "emoji": "🎉",
+        "name": "Party Popper",
+        "short": ":tada:",
+        "description": "Release minor version",
+        "template": "Release minor version {{version}}",
+        "category": "Release"
+    },
+    {
+        "emoji": "✨",
+        "name": "Sparkles",
+        "short": ":sparkles:",
+        "description": "Release patch version",
+        "template": "Release patch version {{version}}",
+        "category": "Release"
+    },
+    {
+        "emoji": "🔖",
+        "name": "Bookmark",
+        "short": ":bookmark:",
+        "description": "Release version / tag",
+        "template": "Release version / tag",
+        "category": "Release"
+    },
+    {
+        "emoji": "⬅️",
+        "name": "Arrow left",
+        "short": ":arrow_left:",
+        "description": "Revert changes",
+        "template": "Revert changes",
+        "category": "GIT"
+    },
+    {
+        "emoji": "🔀",
+        "name": "Twisted Rightwards Arrows",
+        "short": ":twisted_rightwards_arrows:",
+        "description": "Merge branches",
+        "template": "Merge branches",
+        "category": "GIT"
+    },
+    {
+        "emoji": "🎭",
+        "name": "Drama Masks",
+        "short": ":performing_arts:",
+        "description": "Fix conflicts",
+        "template": "Fix conflicts",
+        "category": "GIT"
+    },
+    {
+        "emoji": "🔊",
+        "name": "Increase Volume",
+        "short": ":loud_sound:",
+        "description": "Add or update logs",
+        "template": "Add or update logs in {{description}}",
+        "category": "Logs"
+    },
+    {
+        "emoji": "🔇",
+        "name": "Mute Volume",
+        "short": ":mute:",
+        "description": "Remove logs",
+        "template": "Remove logs in {{description}}",
+        "category": "Logs"
     },
     {
         "emoji": "📃",
@@ -269,30 +389,70 @@
         "short": ":globe_with_meridians:",
         "description": "Add new article",
         "template": "Add new article {{title}}",
-        "category": "Miscelenous"
+        "category": "Miscellaneous"
     },
     {
-        "emoji": "🎊",
-        "name": "Confetti Ball",
-        "short": ":confetti_ball:",
-        "description": "Realease major version",
-        "template": "Realease major version {{version}}",
-        "category": "Release"
+        "emoji": "🚸",
+        "name": "Children Crossing",
+        "short": ":children_crossing:",
+        "description": "Improve UX",
+        "template": "Improve UX",
+        "category": "Miscellaneous"
     },
     {
-        "emoji": "🎉",
-        "name": "Party Popper",
-        "short": ":tada:",
-        "description": "Realease minor version",
-        "template": "Realease minor version {{version}}",
-        "category": "Release"
+        "emoji": "🦽",
+        "name": "Wheelchair",
+        "short": ":manual_wheelchair:",
+        "description": "Improve accessibility",
+        "template": "Improve accessibility",
+        "category": "Miscellaneous"
     },
     {
-        "emoji": "✨",
-        "name": "Sparkles",
-        "short": ":sparkles:",
-        "description": "Realease patch version",
-        "template": "Realease patch version {{version}}",
-        "category": "Release"
+        "emoji": "🔍",
+        "name": "Magnifying Glass",
+        "short": ":mag:",
+        "description": "Improve SEO",
+        "template": "Improve SEO",
+        "category": "Miscellaneous"
+    },
+    {
+        "emoji": "🧑‍💻",
+        "name": "Technologist",
+        "short": ":technologist:",
+        "description": "Improve developer experience",
+        "template": "Improve developer experience",
+        "category": "Miscellaneous"
+    },
+    {
+        "emoji": "💥",
+        "name": "Boom",
+        "short": ":boom:",
+        "description": "Introduce breaking changes",
+        "template": "Introduce breaking changes",
+        "category": "Miscellaneous"
+    },
+    {
+        "emoji": "💬",
+        "name": "Speech Balloon",
+        "short": ":speech_balloon:",
+        "description": "Add or update text",
+        "template": "Add or update text",
+        "category": "Miscellaneous"
+    },
+    {
+        "emoji": "🍭",
+        "name": "Lollipop",
+        "short": ":lollipop:",
+        "description": "Add or update example / demo",
+        "template": "Add or update example / demo",
+        "category": "Miscellaneous"
+    },
+    {
+        "emoji": "🕵️",
+        "name": "Detective",
+        "short": ":detective:",
+        "description": "Add or update track code",
+        "template": "Add or update track code of {{name}}",
+        "category": "Miscellaneous"
     }
 ]
