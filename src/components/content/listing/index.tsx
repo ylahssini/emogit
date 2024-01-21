@@ -11,11 +11,9 @@ function random(min: number, max: number): number {
 const Listing = () => {
     const [state] = useEmojiContext();
 
-    console.log('no_color_font list', state.no_color_font);
-
     return (
         <ul class="grid grid-cols-5 grid-rows-5 gap-8 pb-8">
-            <For each={state.emojis}>
+            <For each={state.emojis.filter((emoji) => state.category !== '' ? (state.category === emoji.category) : true)}>
                 {(emoji) => {
                     const colorIndex = random(0, colors.length - 1);
                     const bg = `bg-${colors[colorIndex]}-100 hover:bg-${colors[colorIndex]}-200`;
