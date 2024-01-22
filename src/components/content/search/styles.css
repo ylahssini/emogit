@@ -1,0 +1,15 @@
+label.switch {
+    @apply flex justify-between items-center gap-2 cursor-pointer;
+}
+
+label.switch > input {
+    @apply hidden;
+}
+
+label.switch > span {
+    @apply bg-gray-200 p-px w-8 rounded-full transition-all before:transition-all before:w-4 before:h-4 before:block before:bg-white before:rounded-full;
+}
+
+label.switch > input:checked + span {
+    @apply bg-yellow-400 before:translate-x-3.5
+}
