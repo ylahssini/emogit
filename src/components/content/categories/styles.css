@@ -1,17 +1,10 @@
-label.switch {
-    @apply flex justify-between items-center gap-2 cursor-pointer;
+.category_container {
+    @apply flex justify-between items-center gap-3 mb-8;
+    container: category_container / inline-size;
 }
 
-label.switch > input {
-    @apply hidden;
-}
-
-label.switch > span {
-    @apply bg-gray-200 p-px w-8 rounded-full transition-all before:transition-all before:w-4 before:h-4 before:block before:bg-white before:rounded-full;
-}
-
-label.switch > input:checked + span {
-    @apply bg-yellow-400 before:translate-x-3.5
+.category_nav {
+    @apply flex justify-between items-center gap-3 max-w-6xl overflow-hidden h-8 w-full;
 }
 
 .category {
@@ -29,4 +22,14 @@ label.switch > input:checked + span {
 
 .category.__selected {
     @apply bg-[0] before:w-full
+}
+
+.nav_button {
+    display: none;
+}
+
+@container category_container (max-width: 971px) {
+    .nav_button {
+        display: block;
+    }
 }
