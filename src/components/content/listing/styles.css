@@ -1,9 +1,29 @@
-.card {
-    @apply transition-all p-4 ease-out text-center rounded-3xl hover:shadow-[0_3px_10px_rgba(0,0,0,0.09)];
-    transform: rotate3d(0);
+@keyframes show_in {
+    0% {
+        opacity: 0;
+        transform: scale(0.6) translateY(-8px);
+    }
+
+    75% {
+        transform: scale(1.07);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-.card:hover {
+.card {
+    @apply opacity-0;
+    animation: show_in 200ms linear calc(var(--animation-order) * 100ms) 1 forwards;
+}
+
+.card > div {
+    @apply transition-transform p-4 text-center rounded-3xl h-full hover:shadow-[0_3px_10px_rgba(0,0,0,0.09)];
+}
+
+.card > div:hover {
     transform: scale3d(1.07, 1.07, 1.07);
 }
 

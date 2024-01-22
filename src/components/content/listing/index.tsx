@@ -42,21 +42,23 @@ const Listing = () => {
         <>
             <ul class="grid grid-cols-5 grid-rows-5 gap-8 pb-8">
                 <For each={state.emojis.filter((emoji) => state.category !== '' ? (state.category === emoji.category) : true)}>
-                    {(emoji) => {
+                    {(emoji, index) => {
                         const colorIndex = random(0, colors.length - 1);
                         const bg = `bg-${colors[colorIndex]}-100 hover:bg-${colors[colorIndex]}-200`;
 
                         return (
-                            <li class={`${bg} card`}>
-                                <button
-                                    class={`${state.system_font ? '' : 'font-emoji'} cursor-copy text-8xl pb-4 transition-transform ease-in-out active:rotate-45 active:scale-125`}
-                                    type="button"
-                                    onClick={() => handleCopy(emoji.emoji, colors[colorIndex])}
-                                >
-                                    {emoji.emoji}
-                                </button>
-                                <h4>{emoji.description}</h4>
-                                <small class="text-gray-500">{emoji.category}</small>
+                            <li class="card" style={`--animation-order:${index() + 1}`}>
+                                <div class={`${bg}`}>
+                                    <button
+                                        class={`${state.system_font ? '' : 'font-emoji'} cursor-copy text-8xl pb-4 transition-transform ease-in-out active:rotate-45 active:scale-125`}
+                                        type="button"
+                                        onClick={() => handleCopy(emoji.emoji, colors[colorIndex])}
+                                    >
+                                        {emoji.emoji}
+                                    </button>
+                                    <h4>{emoji.description}</h4>
+                                    <small class="text-gray-500">{emoji.category}</small>
+                                </div>
                             </li>
                         )
                     }}
