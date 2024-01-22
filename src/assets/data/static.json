@@ -224,6 +224,14 @@
         "category": "Structure"
     },
     {
+        "emoji": "🏗️",
+        "name": "Building Construction",
+        "short": ":building_construction:",
+        "description": "Change the structure",
+        "template": "Change the structure of {{description}}",
+        "category": "Structure"
+    },
+    {
         "emoji": "🍱",
         "name": "Bento",
         "short": ":bento:",
