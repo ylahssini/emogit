@@ -1,35 +1,35 @@
 .category_container {
     @apply flex justify-between items-center gap-3 mb-8;
-    container: category_container / inline-size;
+    container: category_container / size;
 }
 
 .category_nav {
-    @apply flex justify-between items-center gap-3 max-w-6xl overflow-hidden h-8 w-full;
+    @apply flex items-center justify-between snap-x snap-mandatory gap-2 max-w-6xl h-10 w-full mx-auto;
+    overflow: scroll;
+    overscroll-behavior-x: contain;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.category_nav::-webkit-scrollbar {
+    @apply hidden;
 }
 
 .category {
-    @apply font-light h-5 whitespace-nowrap text-sm bg-clip-text relative transition-colors before:bg-yellow-500 before:transition-all before:block before:absolute before:h-0.5 before:w-0 before:left-0 before:-bottom-0.5 hover:bg-[0] hover:before:w-full;
-    background-image: linear-gradient(
-        to right,
-        var(--color-yellow-500),
-        var(--color-yellow-500) 50%,
-        #000 50%
-    ) !important;
-    background-size: 200% 100%;
-    background-position: -100%;
-    -webkit-text-fill-color: transparent;
+    @apply font-light whitespace-nowrap text-xs relative transition-colors rounded-lg border border-slate-200 px-2 py-1 hover:text-yellow-500 hover:border-yellow-500;
+    scroll-snap-align: start;
 }
 
 .category.__selected {
-    @apply bg-[0] before:w-full
+    @apply bg-yellow-500 text-white border-yellow-500;
 }
 
 .nav_button {
-    display: none;
+    @apply hidden font-emoji;
 }
 
-@container category_container (max-width: 971px) {
+@container category_container (width < 1048px) {
     .nav_button {
-        display: block;
+        @apply block;
     }
 }

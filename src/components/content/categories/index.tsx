@@ -2,6 +2,7 @@ import { useEmojiContext } from '@/context';
 import './styles.css';
 
 const Categories = () => {
+    let categoryNavRef: HTMLElement | undefined;
     const [state, { setCategory }] = useEmojiContext();
     const categories = Array.from(new Set(state.emojis.map((emoji) => emoji.category)));
 
@@ -11,9 +12,32 @@ const Categories = () => {
         }
     }
 
+    function handleNavigation(direction: string) {
+        return () => {
+            let left;
+            const { scrollLeft, clientWidth } = categoryNavRef as HTMLElement;
+
+            switch (direction) {
+                case 'prev':
+                    left = scrollLeft - clientWidth;
+                    break;
+                case 'next':
+                default:
+                    left = scrollLeft + clientWidth;
+                    break;
+            }
+
+            categoryNavRef?.scroll({
+                left,
+                behavior: 'smooth',
+            });
+        }
+    }
+
     return (
         <header class="category_container">
-            <nav class="category_nav">
+            <button type="button" class="nav_button" onClick={handleNavigation('prev')}>⬅️</button>
+            <nav ref={categoryNavRef} class="category_nav">
                 {categories.map((category) => (
                     <button
                         type="button"
@@ -24,7 +48,7 @@ const Categories = () => {
                     </button>
                 ))}
             </nav>
-            <button type="button" class="nav_button">next</button>
+            <button type="button" class="nav_button" onClick={handleNavigation('next')}>➡️</button>
         </header>
     );
 }
