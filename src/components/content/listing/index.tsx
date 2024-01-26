@@ -1,4 +1,4 @@
-import { For } from 'solid-js';
+import { For, createMemo, createSignal, Switch, Match } from 'solid-js';
 import toast, { Toaster } from 'solid-toast';
 import { useEmojiContext } from '@/context';
 import './styles.css';
@@ -11,6 +11,7 @@ function random(min: number, max: number): number {
 
 const Listing = () => {
     const [state] = useEmojiContext();
+    const [emojis] = createSignal(state.emojis);
 
     async function handleCopy(emoji: string, color: string) {
         try {
@@ -38,32 +39,58 @@ const Listing = () => {
         }
     }
 
+    const filteredEmojis = createMemo(() => {
+        let filtered = emojis();
+    
+        if (state.category !== '') {
+            filtered = filtered.filter((emoji) => state.category === emoji.category);
+        }
+    
+        if (state.search) {
+            const regSearch = new RegExp(state.search, 'gi');
+            filtered = filtered.filter((emoji) => regSearch.test(emoji.name) || regSearch.test(emoji.description));
+        }
+    
+        return filtered;
+    });
+
     return (
         <>
-            <ul class="grid grid-cols-5 grid-rows-5 gap-8 pb-8">
-                <For each={state.emojis.filter((emoji) => state.category !== '' ? (state.category === emoji.category) : true)}>
-                    {(emoji, index) => {
-                        const colorIndex = random(0, colors.length - 1);
-                        const bg = `bg-${colors[colorIndex]}-100 hover:bg-${colors[colorIndex]}-200`;
+            <Switch>
+                <Match when={filteredEmojis().length === 0}>
+                    <section class="empty_results">
+                        <h4>🙅‍♂️</h4>
+                        <strong>OOps!</strong>
+                        <p>No results found</p>
+                    </section>
+                </Match>
+                <Match when={filteredEmojis().length > 0}>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 grid-rows-5 gap-8 pb-8">
+                        <For each={filteredEmojis()}>
+                            {(emoji, index) => {
+                                const colorIndex = random(0, colors.length - 1);
+                                const bg = `bg-${colors[colorIndex]}-100 hover:bg-${colors[colorIndex]}-200`;
 
-                        return (
-                            <li class="card" style={`--animation-order:${index() + 1}`}>
-                                <div class={`${bg}`}>
-                                    <button
-                                        class={`${state.system_font ? '' : 'font-emoji'} cursor-copy text-8xl pb-4 transition-transform ease-in-out active:rotate-45 active:scale-125`}
-                                        type="button"
-                                        onClick={() => handleCopy(emoji.emoji, colors[colorIndex])}
-                                    >
-                                        {emoji.emoji}
-                                    </button>
-                                    <h4>{emoji.description}</h4>
-                                    <small class="text-gray-500">{emoji.category}</small>
-                                </div>
-                            </li>
-                        )
-                    }}
-                </For>
-            </ul>
+                                return (
+                                    <li class="card" style={`--animation-order:${index() + 1}`}>
+                                        <div class={`${bg}`}>
+                                            <button
+                                                class={`${state.system_font ? '' : 'font-emoji'} cursor-copy text-8xl pb-4 transition-transform ease-in-out active:rotate-45 active:scale-125`}
+                                                type="button"
+                                                onClick={() => handleCopy(emoji.emoji, colors[colorIndex])}
+                                            >
+                                                {emoji.emoji}
+                                            </button>
+                                            <h4>{emoji.description}</h4>
+                                            <small class="text-gray-500">{emoji.category}</small>
+                                        </div>
+                                    </li>
+                                )
+                            }}
+                        </For>
+                    </ul>
+                </Match>
+            </Switch>
             <Toaster />
         </>
     )

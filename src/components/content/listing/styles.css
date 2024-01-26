@@ -87,3 +87,12 @@
     animation: progress_bar 5s linear 0s 1 forwards;
     animation-play-state: running;
 }
+
+.empty_results {
+    @apply bg-slate-100 rounded-md flex justify-center items-center flex-col py-10;
+    animation: show_in 200ms linear 0s 1 forwards;
+}
+
+.empty_results > h4 {
+    @apply font-emoji text-9xl mb-4;
+}
