@@ -15,16 +15,38 @@
 }
 
 .card {
-    @apply opacity-0;
-    animation: show_in 200ms linear calc(var(--animation-order) * 100ms) 1 forwards;
+    @apply opacity-0 ;
+    animation: show_in 200ms linear calc(var(--animation-order) * 50ms) 1 forwards;
 }
 
-.card > div {
-    @apply transition-transform p-4 text-center rounded-3xl h-full hover:shadow-[0_3px_10px_rgba(0,0,0,0.09)];
+.card_container {
+    @apply overflow-hidden bg-white rounded-3xl p-4 text-center transition-shadow translate-y-0 h-full;
+    box-shadow: 0 1px 2px rgba(0,0,0,0);
 }
 
-.card > div:hover {
-    transform: scale3d(1.07, 1.07, 1.07);
+.card_container > section {
+    @apply flex justify-center items-center gap-4 flex-col relative z-30;
+}
+
+.overlay-bg {
+    @apply transition-all ease-in-out duration-500 w-32 h-32 rounded-full absolute top-4 left-1/2 -translate-x-1/2 z-10;
+}
+
+.overlay-white {
+    @apply bg-white opacity-0 scale-0 transition-all ease-in-out delay-200 duration-200 w-32 h-32 rounded-full absolute top-4 left-1/2 -translate-x-1/2 z-20
+}
+
+.card:hover > .card_container {
+    @apply -translate-y-px;
+    box-shadow: 0 10px 20px 0 var(--color);
+}
+
+.card:hover .overlay-bg {
+    @apply scale-150 w-full h-full;
+}
+
+.card:hover .overlay-white {
+    @apply scale-100 opacity-100;
 }
 
 @keyframes come_in {

@@ -72,17 +72,26 @@ const Listing = () => {
                                 const bg = `bg-${colors[colorIndex]}-100 hover:bg-${colors[colorIndex]}-200`;
 
                                 return (
-                                    <li class="card" style={`--animation-order:${index() + 1}`}>
-                                        <div class={`${bg}`}>
-                                            <button
-                                                class={`${state.system_font ? '' : 'font-emoji'} cursor-copy text-8xl pb-4 transition-transform ease-in-out active:rotate-45 active:scale-125`}
-                                                type="button"
-                                                onClick={() => handleCopy(emoji.emoji, colors[colorIndex])}
-                                            >
-                                                {emoji.emoji}
-                                            </button>
-                                            <h4>{emoji.description}</h4>
-                                            <small class="text-gray-500">{emoji.category}</small>
+                                    <li class="card" style={`--animation-order:${index() + 1};--color:var(--color-${colors[colorIndex]}-50)`}>
+                                        <div class="card_container">
+                                            <section>
+                                                <header class="w-32 h-32 flex items-center justify-center flex-col">
+                                                    <button
+                                                        class={`${state.system_font ? '' : 'font-emoji'} cursor-copy text-8xl transition-transform ease-in-out active:rotate-45 active:scale-125`}
+                                                        type="button"
+                                                        onClick={() => handleCopy(emoji.emoji, colors[colorIndex])}
+                                                    >
+                                                        {emoji.emoji}
+                                                    </button>
+                                                </header>
+                                                <div>
+                                                    <h4>{emoji.description}</h4>
+                                                    <small class="text-gray-500">{emoji.category}</small>
+                                                </div>
+                                            </section>
+
+                                            <div class="overlay-white"></div>
+                                            <footer class={`overlay-bg ${bg}`}></footer>
                                         </div>
                                     </li>
                                 )
