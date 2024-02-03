@@ -16,7 +16,7 @@
 }
 
 .category {
-    @apply font-light whitespace-nowrap text-xs relative transition-colors rounded-lg border border-slate-200 px-2 py-1 hover:text-yellow-500 hover:border-yellow-500;
+    @apply font-light whitespace-nowrap text-sm relative transition-colors px-2 py-1 hover:text-yellow-500;
     scroll-snap-align: start;
 }
 
