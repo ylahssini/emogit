@@ -462,5 +462,21 @@
         "description": "Add or update track code",
         "template": "Add or update track code of {{name}}",
         "category": "Miscellaneous"
+    },
+    {
+        "emoji": "🙈",
+        "name": "See-No-Evil Monkey",
+        "short": ":see_no_evil:",
+        "description": "Ignore file",
+        "template": "Ignore file in {{file}}",
+        "category": "Miscellaneous"
+    },
+    {
+        "emoji": "⚡",
+        "name": "Lightning Bolt",
+        "short": ":zap:",
+        "description": "Improve performance",
+        "template": "Improve performance of {{message}}",
+        "category": "Miscellaneous"
     }
 ]
