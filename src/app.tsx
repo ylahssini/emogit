@@ -1,4 +1,4 @@
-import { Router, Route } from "@solidjs/router";
+import { MetaProvider } from '@solidjs/meta';
 import '@fontsource-variable/noto-sans-hk';
 import Home from "@/pages/home";
 import EmojiProvider from './context';
@@ -7,13 +7,15 @@ import Footer from "./components/footer";
 
 const App = () => {
     return (
-        <main>
-            <Header />
-            <EmojiProvider>
-                <Home />
-            </EmojiProvider>
-            <Footer />
-        </main>
+        <MetaProvider>
+            <main>
+                <Header />
+                <EmojiProvider>
+                    <Home />
+                </EmojiProvider>
+                <Footer />
+            </main>
+        </MetaProvider>
     )
 }
 
