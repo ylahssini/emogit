@@ -1,9 +1,9 @@
 /* @refresh reload */
+import { render } from 'solid-js/web';
+import App from './app';
 import './assets/styles/base.css';
-import { hydrate } from "solid-js/web";
-import App from "./app";
 
-const root = document.getElementById('app');
+const root = document.getElementById('root');
 
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
     throw new Error(
@@ -11,4 +11,8 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
     );
 }
 
-hydrate(() => <App />, root!);
+const dispose = render(() => <App />, root!);
+
+if (import.meta.hot) {
+    import.meta.hot.dispose(dispose);
+}
