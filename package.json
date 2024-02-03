@@ -1,34 +1,41 @@
 {
-  "name": "vite-template-solid",
-  "version": "0.0.0",
-  "description": "",
-  "scripts": {
-    "start": "vite",
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.18.1",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.56.0",
-    "eslint-config-standard-with-typescript": "^43.0.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-solid": "^0.13.1",
-    "postcss": "^8.4.33",
-    "solid-devtools": "^0.27.3",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3",
-    "vite": "^4.3.9",
-    "vite-plugin-solid": "^2.7.0"
-  },
-  "dependencies": {
-    "@fontsource-variable/noto-sans-hk": "^5.0.4",
-    "@solidjs/router": "^0.10.9",
-    "solid-js": "^1.7.6",
-    "solid-toast": "^0.5.0"
-  }
+    "name": "emogit",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "scripts": {
+        "dev": "nodemon ./server.js",
+        "build": "npm run build:client && npm run build:server",
+        "build:client": "vite build --ssrManifest --outDir dist/client",
+        "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
+        "preview": "cross-env NODE_ENV=production nodemon ./server.js"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^6.18.1",
+        "autoprefixer": "^10.4.16",
+        "concurrently": "^8.2.2",
+        "eslint": "^8.56.0",
+        "eslint-config-standard-with-typescript": "^43.0.0",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-n": "^16.6.2",
+        "eslint-plugin-promise": "^6.1.1",
+        "eslint-plugin-solid": "^0.13.1",
+        "nodemon": "^3.0.3",
+        "postcss": "^8.4.33",
+        "solid-devtools": "^0.27.3",
+        "tailwindcss": "^3.4.1",
+        "typescript": "^5.3.3",
+        "vite": "^4.3.9",
+        "vite-plugin-solid": "^2.7.0"
+    },
+    "dependencies": {
+        "@fontsource-variable/noto-sans-hk": "^5.0.4",
+        "@solidjs/router": "^0.10.9",
+        "cross-env": "^7.0.3",
+        "express": "^4.18.2",
+        "solid-js": "^1.7.6",
+        "solid-meta": "^0.28.1",
+        "solid-toast": "^0.5.0"
+    }
 }

@@ -17,5 +17,5 @@
     },
     "resolveJsonModule": true
   },
-  "exclude": ["./.eslintrc.js"]
+  "exclude": ["./.eslintrc.js", "./server.js"]
 }

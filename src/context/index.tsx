@@ -1,4 +1,4 @@
-import { JSX, createContext, createSignal, useContext } from 'solid-js';
+import { createContext, createSignal, useContext } from 'solid-js';
 import { createStore } from 'solid-js/store';
 import staticData from '@/assets/data/static.json';
 
@@ -57,7 +57,6 @@ function useProvider() {
             },
     
             setFontSetting(key: 'no_color_font' | 'system_font', value: boolean) {
-                console.log('key', key, value);
                 setState(key, value);
             }
         }
