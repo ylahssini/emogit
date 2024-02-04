@@ -1,4 +1,10 @@
 /** @type {import('tailwindcss').Config} */
+
+function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? `${parseInt(result[1], 16)},${parseInt(result[2], 16)},${parseInt(result[3], 16)}` : '';
+}
+
 module.exports = {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     safelist: [
@@ -64,10 +70,15 @@ module.exports = {
                 return Object.keys(colorObj).reduce((vars, colorKey) => {
                     const value = colorObj[colorKey];
 
-                    const newVars =
-                        typeof value === 'string'
-                            ? { [`--color${colorGroup}-${colorKey}`]: value }
-                            : extractColorVars(value, `-${colorKey}`);
+                    let newVars;
+                    if (typeof value === 'string') {
+                        newVars = {
+                            [`--color${colorGroup}-${colorKey}`]: value,
+                            [`--rgb${colorGroup}-${colorKey}`]: hexToRgb(value),
+                        };
+                    } else {
+                        newVars = extractColorVars(value, `-${colorKey}`);
+                    }
 
                     return { ...vars, ...newVars };
                 }, {});
