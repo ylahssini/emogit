@@ -38,7 +38,7 @@
 
 .card:hover > .card_container {
     @apply -translate-y-px;
-    box-shadow: 0 10px 20px 0 var(--color);
+    box-shadow: 0 10px 20px 0 rgba(var(--color), 0.3);
 }
 
 .card:hover .overlay-bg {

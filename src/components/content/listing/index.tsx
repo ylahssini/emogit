@@ -72,7 +72,7 @@ const Listing = () => {
                                 const bg = `bg-${colors[colorIndex]}-100 hover:bg-${colors[colorIndex]}-200`;
 
                                 return (
-                                    <li class="card" style={`--animation-order:${index() + 1};--color:var(--color-${colors[colorIndex]}-50)`}>
+                                    <li class="card" style={`--animation-order:${index() + 1};--color:var(--rgb-${colors[colorIndex]}-500)`}>
                                         <div class="card_container">
                                             <section>
                                                 <header class="w-32 h-32 flex items-center justify-center flex-col">

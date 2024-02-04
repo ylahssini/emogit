@@ -1,3 +1,16 @@
+.search_fieldset {
+    @apply rounded-xl bg-white flex items-center justify-between w-9/12 relative translate-y-0 transition-all ease-out shadow-sm shadow-transparent;
+}
+
+.search_fieldset:hover {
+    @apply -translate-y-px;
+    box-shadow: 0 5px 5px 0 rgba(var(--rgb-slate-500), 0.3);
+}
+
+.search_fieldset:focus-within {
+    box-shadow: 0 5px 5px 0 rgba(var(--rgb-yellow-500), 0.15);
+}
+
 label.switch {
     @apply flex justify-between items-center gap-2 cursor-pointer;
 }

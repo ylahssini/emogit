@@ -18,7 +18,7 @@ const Search = () => {
 
     return (
         <div class="flex items-center max-w-xl mt-8 mb-12 mx-auto gap-4">
-            <fieldset class="rounded-xl bg-white flex items-center justify-between w-9/12 relative">
+            <fieldset class="search_fieldset">
                 <input
                     type="text"
                     placeholder="Search name or description..."
