@@ -478,5 +478,13 @@
         "description": "Improve performance",
         "template": "Improve performance of {{message}}",
         "category": "Miscellaneous"
+    },
+    {
+        "emoji": "💩",
+        "name": "Smiling Poop",
+        "short": ":shit:",
+        "description": "Write a bad code",
+        "template": "Write a bad code of {{message}}",
+        "category": "Script/Code"
     }
 ]
