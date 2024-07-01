@@ -96,6 +96,14 @@
         "category": "Script/Code"
     },
     {
+        "emoji": "✏️",
+        "name": "Pencil",
+        "short": ":pencil2:",
+        "description": "Update or correct the names in code",
+        "template": "Update or correct the names in code",
+        "category": "Script/Code"
+    },
+    {
         "emoji": "🐛",
         "name": "Bug",
         "short": ":bug:",
@@ -390,6 +398,14 @@
         "description": "Remove logs",
         "template": "Remove logs in {{description}}",
         "category": "Logs"
+    },
+    {
+        "emoji": "🚀",
+        "name": "Rocket",
+        "short": ":rocket:",
+        "description": "Deploy",
+        "template": "Deploy",
+        "category": "Miscellaneous"
     },
     {
         "emoji": "📃",
